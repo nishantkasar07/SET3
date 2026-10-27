@@ -1,0 +1,13 @@
+cat > HelloWorld.java <<'EOF'
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Feature branch update from EC2!");
+    }
+}
+EOF
+
+git add HelloWorld.java
+git commit -m "Update HelloWorld output"
+git push -u origin feature/update-hello
+git rev-parse --short HEAD
+git status
